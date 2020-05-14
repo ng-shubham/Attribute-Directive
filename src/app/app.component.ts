@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Directives';
+  
+  courses = ['course1', 'course2', 'course3'];
+
 }
