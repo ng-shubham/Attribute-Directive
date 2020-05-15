@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Directives';
   
-  courses = ['course1', 'course2', 'course3'];
+  courses = ['Directive 1', 'Directive 2', 'Directive 3', 'Directive 4', 'Directive 5']; 
 
 }
