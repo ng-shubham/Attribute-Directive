@@ -6,11 +6,11 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class CardHighlightDirective {
 
   @HostListener('click') btn(){
-    this.onClick('yellow', '1px solid green');
+    this.onClick('#007bff', '1px solid green');
   }
 
   @HostListener('mouseenter') btn1(){
-    this.onClick('white', '1px solid red'); 
+    this.onClick('#ffc107', '1px solid red'); 
   }
 
   constructor(private el: ElementRef) { }

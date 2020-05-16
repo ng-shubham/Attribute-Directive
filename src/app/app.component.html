@@ -1,32 +1,41 @@
 <div class="">
     <div class="container">
-        <h2 appHighlightText class="text-center">Attribute Directives </h2>
+        <h2 appHighlightText class="text-center my-3">Structural & Attribute Directives </h2>
         <div class="row">
             <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-header">
-                        Directives 
+                        Section 1 
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Attribute Directives</h5>
-                        <p class="card-text text-success">click and mouseenter event on directive list.</p> 
+                        <h5 class="card-title">Hover or Click on directives list</h5>
+                        <p class="card-text text-success"><strong>click</strong> and <strong>mouseenter</strong> event on directive array list and If list length is less than or equal to four than display the message by <strong>*ngIf</strong> directive.</p> 
                     </div>
-                    <div appCardHighlight class="card-footer text-muted" *ngFor="let course of courses"> 
-                        <span class="badge badge-success">{{course}}</span> 
+                    <div appCardHighlight class="card-footer text-muted" *ngFor="let directive of Directives"> 
+                        <span class="badge badge-success">{{directive}}</span> 
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card text-center">
                     <div class="card-header">
-                        Directives 
+                        Section 2 
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Attribute Directives</h5>
-                        <p class="card-text text-danger">click and mouseenter event on directive list.</p> 
+                        <h5 class="card-title">Hover or Click on directives list</h5>
+                        <p class="card-text text-danger"><strong>click</strong> and <strong>mouseenter</strong> event on directive array list and If list length is less than or equal to four than display the message by <strong>*ngIf</strong> directive.</p> 
                     </div>
-                    <div appCardHighlight class="card-footer text-muted" *ngFor="let course of courses"> 
-                        <span class="badge badge-danger">{{course}}</span> 
+                    <div >
+                        <div *ngIf="Directives.length > 4 else message"> 
+                            <div appCardHighlight *ngFor="let directive of Directives" class="card-footer text-muted">
+                                <span class="badge badge-danger">{{directive}}</span> 
+                            </div>
+                        </div>
+                        <ng-template #message>
+                            <div appCardHighlight class="card-footer text-muted">
+                                <span class="badge badge-danger">Directive list lenght is less than 4</span>
+                            </div>
+                        </ng-template>
                     </div>
                 </div>                
             </div>
